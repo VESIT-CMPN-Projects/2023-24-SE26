@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='qna.css') }}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">TechnoProbe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/community">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/internship">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/rec_dashboard">Recruiter_Dashboard</a>
+            </li>
+            <li class="nav-item">
+<!--              <a class="nav-link" href="/profile" tabindex="-1" aria-disabled="true">Profile</a>-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>Question</h2>
+        <form method="post" action="{{ url_for('qna') }}">
+            <label for="title-input">Question Title:</label>
+            <input type="text" id="title-input" name="title" required>
+            <label for="question-input">Your Multi-Line Question:</label>
+            <textarea id="question-input" name="question" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    {% if questions %}
+        {% for question in questions %}
+            <div class="question-form" id="title">
+                <div class="question">
+                    <div class="question-header">
+
+                        <h4 data-question-id="{{ question.id }}">{{ question.id or '' }}</h4>
+                        <h2 class="question-title">{{ question.title }}</h2>
+                        {% if 'username' in session %}
+                            <p class="author-name">Author: {{ question.account }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="question-content">
+                        <p>{{ question.content }}</p>
+                    </div>
+                    <div class="buttons-container">
+<!--                        <button type="submit" class="like-button">Like</button>-->
+                        <label for="reply-toggle-{{ question.id }}" class="reply-button toggle-reply-form">Reply</label>
+                    </div>
+
+                    <input type="checkbox" id="reply-toggle-{{ question.id }}" class="reply-toggle">
+                    <form method="POST" action="{{ url_for('qna') }}" class="reply-form" id="reply-form">
+                        <input type="hidden" name="form-type" value="reply">
+                        <input type="hidden" name="question_id" value="{{ question.id }}">
+                        <textarea rows="4" cols="50" name="replyContent" placeholder="Your reply..."></textarea>
+                        <button type="submit">Submit Reply</button>
+                    </form>
+
+                    {% if question.replies %}
+                        <div class="replies">
+                            <h3>Replies:</h3>
+                            <ul>
+                                {% for reply in question.replies %}
+                                        Author: {{reply.reply_account}}
+                                    <li>{{ reply.content }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <script>
+        var replyButtons = document.querySelectorAll('.toggle-reply-form');
+
+        replyButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var parentQuestion = button.closest('.question');
+                var replyForm = parentQuestion.querySelector('.reply-form');
+                var checkbox = parentQuestion.querySelector('.reply-toggle');
+
+                if (replyForm.style.display === 'block') {
+                    replyForm.style.display = 'none';
+                    checkbox.checked = false;
+                } else {
+                    replyForm.style.display = 'block';
+                    checkbox.checked = true;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* reply.css */
+.reply-form {
+    display: none;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.reply-form form {
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.reply-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.reply-form button:hover {
+    background-color: #0056b3;
+}

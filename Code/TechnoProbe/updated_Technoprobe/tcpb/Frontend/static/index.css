@@ -1,0 +1,232 @@
+*{
+    text-decoration: none;
+}
+
+.TechnoProbe{
+    margin-left: 10px;
+    margin-right: 100px;
+    padding-left: 20px;
+    color: #f97204;
+    display: inline-block;
+    font-weight: 900;
+    font-family: 'Poppins',sans-serif;
+}
+
+.profile-pic{
+    width: 40px;
+    border-radius:50%;
+}
+
+h4{
+    display: inline-block;
+    margin: 25px;
+    font-weight: 900;
+    font-family: 'Poppins',sans-serif;
+    color: brown;
+    text-decoration: none;
+}
+.about-us{
+    margin-left: 185px;
+}
+.links{
+    float: right;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200px;
+    text-color: #000;
+}
+
+.links a{
+    color: #086748;
+}
+
+li.dropdown {
+    display: inline-block;
+    position: relative;
+    margin: 25px;
+    font-weight: 900;
+    font-family: 'Poppins',sans-serif;
+    color: brown;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Background color for dropdown */
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #086748;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #e8d0d0;
+}
+#l1{
+    text-decoration: none;
+    color: brown;
+}
+#job-heading{
+    margin-left: 25px;
+}
+.desc{
+    width: 550px;
+    margin-left: 125px;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+.intro{
+    width: 550px;
+    height: 480px;
+    margin-top: 65px;
+    padding-bottom: 20px;
+    margin-left: 25px;
+    font-weight: 900;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px ;
+}
+
+.image1{
+    height: 350px;
+    width: 400px;
+    margin-left: 980px;
+    position: absolute;
+    top: 155px;
+    left: 0px;
+    border-radius: 50%;
+}
+
+.findajob{
+    color: black;
+}
+
+button{
+    position: relative;
+    width: 150px;
+    bottom: 10px;
+    padding: 20px;
+    margin-left: 670px;
+    border-radius: 20px;
+    border: 1px;
+    background-color: #00ffe5;
+}
+
+button a{
+    font-size: 23px;
+    color: black;
+}
+
+.community-intro{
+    margin-right: 200px;
+    position: relative;
+    height: 300px;
+    margin-top: 100px;
+    float: right;
+    width: 630px;
+    padding: 10px;
+    font-weight: 900;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px ;
+    text-align: justify;
+}
+.button-2{
+   position: relative;
+    width: 150px;
+    bottom: 10px;
+    padding: 20px;
+    right: 790px;
+    border-radius: 20px;
+    border: 1px;
+    background-color: #00ffe5;
+}
+
+.image2{
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    left: 265px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 120px;
+}
+
+.internship-intro{
+    position: relative;
+    top: 20px;
+    font-family:'Poppins', sans-serif;
+    width: 800px;
+    text-align: justify;
+    left: 200px;
+}
+
+.google-logo{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 700px;
+    left: 1100px;
+}
+.microsoft-logo{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 1000px;
+    left: 1100px;
+}
+.heading{
+    text-align: center;
+}
+#head{
+    color: black;
+    font-weight: 300;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px;
+
+}
+.intern-para1{
+    padding-left: 25px;
+}
+.Apply{
+    color: cyan;
+}
+header{
+    background-color: sky blue;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.form-container {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+.flash-messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.flash-message {
+    margin-bottom: 10px;
+}

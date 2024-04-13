@@ -1,0 +1,111 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+}
+
+.links li {
+    margin: 0 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #1c6bd9;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.welcome {
+    text-align: center;
+    margin: 20px;
+}
+
+.post-job-section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-job-section h2 {
+    color: #3498db;
+}
+
+.post-job-section p {
+    color: #333;
+}
+
+.post-job {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.post-job:hover {
+    background-color: #1c6bd9;
+}
+
+.find-candidates {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.find-candidates:hover {
+    background-color: #1c6bd9;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

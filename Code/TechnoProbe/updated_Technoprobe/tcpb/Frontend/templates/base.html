@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        .profile {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .account-info {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    {% for p in post %}
+        <div class="profile">
+            <h3>Matching Profile</h3>
+            <p class="account-info">{{ p['account'] }}</p>
+            <p class="account-info">{{ p['email'] }}</p>
+            <ul class="skill-list">
+                {% for skill in p['skill_list'] %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</body>
+</html>

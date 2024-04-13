@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community of Interest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ece0e0;
+            margin: 10;
+            padding: 10;
+        }
+
+        header {
+            background-color: #072f9e;
+            color: #ece9e9;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #d85417;
+            color: #e9dedeee;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0e3e3;
+            margin: 0 10px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(19, 0, 0);
+        }
+
+        footer {
+            background-color: #f75f07;
+            color: #faeff8;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Add style for the "Join" button */
+        .join-button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .flash-messages {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .flash-message {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <p class="flash-message">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <header>
+        <h1>Welcome to the Community of Interest</h1>
+    </header>
+    <nav>
+        <a href="#java">Java</a>
+        <a href="#python">Python</a>
+        <a href="#webdev">Web Development</a>
+        <a href="/ml">Machine Learning</a>
+        <a href="#cybersecurity">Cyber Security</a>
+    </nav>
+    <section id="java">
+        <h2><a href="/java">Java Community</a></h2>
+        <p>Join our Java community
+            <form action="/community" method="post">
+                <button type="submit" class="join-button" name="join-java">Join</button>
+            </form>
+        </p>
+    </section>
+    <section id="python">
+        <h2><a href="/python">Python Community</a></h2>
+        <p>Join our Python community
+            <form action="/community" method="post">
+                <button type="submit" class="join-button" name="join-python">Join</button>
+            </form>
+        </p>
+    </section>
+    <section id="webdev">
+        <h2><a href="/webdev">Web development Community</a></h2>
+        <p>Join our Web development community
+            <form action="/community" method="post">
+                <button type="submit" class="join-button" name="join-webdev">Join</button>
+            </form>
+        </p>
+    </section>
+    <section id="Machine learning">
+        <h2><a href="/machine-learning">Machine learning Community</a></h2>
+        <p>Join our Machine learning community
+            <form action="/community" method="post">
+                <button type="submit" class="join-button" name="join-machine-learning">Join</button>
+            </form>
+        </p>
+    </section>
+    <section id="cybersecurity">
+        <h2><a href="/cybersecurity">Cybersecurity Community</a></h2>
+        <p>Join our Cybersecurity community
+            <form action="/community" method="post">
+                <button type="submit" class="join-button" name="join-cybersecurity">Join</button>
+            </form>
+        </p>
+    </section>
+    <footer>
+        &copy; 2023 Community of Interest
+    </footer>
+</body>
+</html>

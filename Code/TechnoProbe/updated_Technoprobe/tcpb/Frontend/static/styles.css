@@ -1,0 +1,145 @@
+.TechnoProbe{
+    margin-left: 10px;
+    margin-right: 100px;
+    display: inline-block;
+    font-weight: 900;
+    font-family: 'Poppins',sans-serif;
+}
+h2{
+    display: inline-block;
+    margin: 25px;
+    font-weight: 900;
+    font-family: 'Poppins',sans-serif;
+    color: brown;
+    text-decoration: none;
+}
+.about-us{
+    margin-left: 185px;
+}
+.links{
+    float: right;
+}
+#l1{
+    text-decoration: none;
+    color: brown;
+}
+#job-heading{
+    margin-left: 25px;
+}
+.desc{
+    width: 550px;
+    margin-left: 25px;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+.intro{
+    
+    width: 550px;
+    height: 480px;
+    margin-top: 65px;
+    padding-bottom: 20px;
+    margin-left: 25px;
+
+    font-weight: 900;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px ;
+
+}
+.image1{
+    height: 500px;
+    width: 550px;
+    margin-left: 650px;
+    position: absolute;
+    top: 155px;
+    left: 0px;  
+    border-radius: 50%;
+}
+.findajob{
+    color: cyan;
+}
+.join{
+    color: cyan;
+    text-decoration: none;
+}
+button{
+    position: relative;
+    top: 25px;
+    padding: 20px;
+    margin-left: 25px;
+    border-radius: 20px;
+    border:1px ;
+    background-color: brown;
+}
+.community-intro{
+    margin-left: 25px;
+    position: relative;
+    height: 500px;
+    top: 150px;
+    float: right;
+    width: 630px;
+    padding: 10px;
+    font-weight: 900;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px ;
+
+
+}
+.button-2{
+    position: relative;
+    top: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px;
+    background-color: brown;
+    width: 90px;
+}
+.join{
+    color: aqua;
+
+}
+.image2{
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    right: 665px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 200px;
+}
+.internship-intro{
+    position: relative;
+    top: 700px;
+    font-family:'Poppins', sans-serif;
+
+    width: 700px;
+}
+.google-logo{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 1700px;
+    left: 800px;
+}
+.microsoft-logo{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 1300px;
+    left: 800px;
+}
+.heading{
+    text-align: center;
+}
+#head{
+    color: black;
+    font-weight: 300;
+    font-family:'Poppins', sans-serif;
+    margin-left: 25px;
+
+}
+.intern-para1{
+    padding-left: 25px;
+}
+.Apply{
+    color: cyan;    
+}

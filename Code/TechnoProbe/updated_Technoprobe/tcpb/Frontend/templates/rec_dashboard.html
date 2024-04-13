@@ -1,0 +1,204 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+<!--    <title>Recruiter Portal</title>-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='recruiter.css') }}">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">-->
+
+
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: 'Poppins', sans-serif;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+
+<!--        header {-->
+<!--            background-color: #3498db;-->
+<!--            color: #fff;-->
+<!--            padding: 15px;-->
+<!--            text-align: center;-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        .links h2 {-->
+<!--            margin: 0;-->
+<!--            padding: 0 10px;-->
+<!--            text-decoration: none;-->
+<!--            color: #fff;-->
+<!--            transition: color 0.3s;-->
+<!--        }-->
+
+<!--        .links h2:hover {-->
+<!--            color: #1c6bd9;-->
+<!--        }-->
+
+<!--        .profile-pic {-->
+<!--            border-radius: 50%;-->
+<!--            width: 50px;-->
+<!--            height: 50px;-->
+<!--        }-->
+
+<!--        .welcome {-->
+<!--            text-align: center;-->
+<!--            margin: 20px;-->
+<!--        }-->
+
+<!--        section {-->
+<!--            background-color: #fff;-->
+<!--            margin: 20px;-->
+<!--            padding: 20px;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);-->
+<!--        }-->
+
+<!--        .post-job-section button,-->
+<!--        .view-applications-section button {-->
+<!--            background-color: #3498db;-->
+<!--            color: #fff;-->
+<!--            padding: 10px 15px;-->
+<!--            border: none;-->
+<!--            border-radius: 4px;-->
+<!--            cursor: pointer;-->
+<!--            text-decoration: none;-->
+<!--            display: inline-block;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+
+<!--        .post-job-section button:hover,-->
+<!--        .view-applications-section button:hover {-->
+<!--            background-color: #1c6bd9;-->
+<!--        }-->
+
+<!--        footer {-->
+<!--            background-color: #333;-->
+<!--            color: #fff;-->
+<!--            text-align: center;-->
+<!--            padding: 10px;-->
+<!--            position: fixed;-->
+<!--            bottom: 0;-->
+<!--            width: 100%;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="links">-->
+<!--    <h2><a href="/about-us">About us</a></h2>-->
+<!--    <h2 style="text-decoration: none"><a href="/qna">QnA</a></h2>-->
+<!--    <h2><a href="/community">Community</a></h2>-->
+<!--    <h2><a href="/internship">Internship</a></h2>-->
+<!--    <h2><a href="/rec-profile">Profile</a></h2>-->
+<!--    <a href="/signup"></a>-->
+<!--</div>-->
+<!--    <a href="/logout">Logout</a>-->
+<!--    <a href="/login">Login</a>-->
+<!--&lt;!&ndash;<img src="{{ url_for('static', filename='images/image1.jpg') }}" class="image1">&ndash;&gt;-->
+<!--    {% with messages = get_flashed_messages() %}-->
+<!--        {% if messages %}-->
+<!--            <div class="flash-messages">-->
+<!--                {% for message in messages %}-->
+<!--                    <p class="flash-message">{{ message }}</p>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% endif %}-->
+<!--    {% endwith %}-->
+<!--    <header>-->
+<!--        <h1 class="TechnoProbe">Recruiter Portal</h1>-->
+<!--        <div class="links">-->
+<!--            <h2><a href="/about-us">About us</a></h2>-->
+<!--            <h2><a href="/posts">Post a Job</a></h2>-->
+<!--            <h2><a href="/view-applications">View Applications</a></h2>-->
+<!--            <a href="/logout">Logout</a>-->
+<!--        </div>-->
+<!--        <img src="{{ url_for('static', filename='images/recruiter.jpg') }}" class="profile-pic">-->
+<!--    </header>-->
+
+<!--    <div class="welcome">-->
+<!--        <h1>Welcome, [Recruiter Name]!</h1>-->
+<!--        <p>Explore talented individuals and make your next great hire.</p>-->
+<!--    </div>-->
+
+<!--    <section class="post-job-section">-->
+<!--        <h2>Post a Job</h2>-->
+<!--        <p>Share your job opportunities with our community.</p>-->
+<!--        <button class="post-job"><a href="/post">Post a Job</a></button>-->
+
+
+<!--    </section>-->
+<!--    <form method="post" action="/find-candidates">-->
+<!--        <button class="find-candidates" type="submit">Find Candidates</button>-->
+<!--    </form>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='recruiter.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="TechnoProbe">Recruiter Portal</h1>
+        <nav class="links">
+            <ul>
+                <li><a href="/about-us">About us</a></li>
+                <li><a href="/qna">QnA</a></li>
+                <li><a href="/community">Community</a></li>
+                <li><a href="/internship">Internship</a></li>
+<!--                <li><a href="/rec-profile">Profile</a></li>-->
+<!--                <li><a href="/signup">Sign Up</a></li>-->
+                <li><a href="/logout">Logout</a></li>
+<!--                <li><a href="/login">Login</a></li>-->
+                <li><a href="/posts">Post</a></li>
+            </ul>
+        </nav>
+        <img src="{{ url_for('static', filename='images/recruiter.jpg') }}" class="profile-pic">
+    </header>
+<!--    {% with messages = get_flashed_messages() %}-->
+<!--        {% if messages %}-->
+<!--            <div class="flash-messages">-->
+<!--                {% for message in messages %}-->
+<!--                    <p class="flash-message">{{ message }}</p>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% endif %}-->
+<!--    {% endwith %}-->
+    <div class="welcome">
+        {%if name%}
+            <h1>Welcome, {{name}}!</h1>
+        {%endif%}
+        <p>Explore talented individuals and make your next great hire.</p>
+    </div>
+
+    <section class="post-job-section">
+        <h2>Post a Job</h2>
+        <p>Share your job opportunities with our community.</p>
+        <form method="post" action="/posts">
+            <button class="post-job" type="submit"><a href="/posts" style="text-decoration: none;">Post a Job</a></button>
+        </form>
+    </section>
+
+
+
+    <footer>
+        &copy; 2024 Recruiter Portal. All rights reserved.
+    </footer>
+</body>
+</html>

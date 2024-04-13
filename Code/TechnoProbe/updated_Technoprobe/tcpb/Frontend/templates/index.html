@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechnoProbe: A Career Guide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<h1 class="TechnoProbe">TechnoProbe</h1>
+
+<!--<div class="links">-->
+<!--    <h4><a href="/about-us">About us</a></h4>-->
+<!--    <h4 style="text-decoration: none"><a href="/qna">QnA</a></h4>-->
+<!--    <h4><a href="/community">Community</a></h4>-->
+<!--    <h4><a href="/internship">Internship</a></h4>-->
+<!--    <h4><a href="/profile">Profile</a></h4>-->
+<!--&lt;!&ndash;    <a href="/signup"><img src="{{url_for('static', filename='images/profile-pic.png')}}" class="profile-pic"></a>&ndash;&gt;-->
+<!--    <li class="dropdown">-->
+<!--        <a href="#">Account</a>-->
+<!--        <div class="dropdown-content">-->
+<!--            <a href="/login">Login</a>-->
+<!--            <a href="/signup">SignUp</a>-->
+<!--            <a href="/logout">Logout</a>-->
+<!--        </div>-->
+<!--    </li>-->
+<!--</div>-->
+
+<div class="links">
+    <h4><a href="/about-us">About us</a></h4>
+    <h4 style="text-decoration: none"><a href="/qna">QnA</a></h4>
+    <h4><a href="/community">Community</a></h4>
+    <h4><a href="/internship">Internship</a></h4>
+    <h4><a href="/profile">Profile</a></h4>
+    <!--    <a href="/signup"><img src="{{url_for('static', filename='images/profile-pic.png')}}" class="profile-pic"></a>-->
+    <li class="dropdown">
+        <a href="#">Account</a>
+        <div class="dropdown-content">
+            {% if 'username' in session %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/signup">SignUp</a>
+            {% endif %}
+        </div>
+    </li>
+</div>
+
+<img src="{{ url_for('static', filename='images/image1.jpg') }}" class="image1">
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+                <p class="flash-message">{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+<div class="desc">
+    <h1>{%if name%}{{name}}{%endif%}
+    </h1>
+    <h1>Find a job which best suits you</h1>
+    <p>
+        <h3>Looking for a new job? Create a profile on TechnoProbe to
+        connect directly with growing communities and companies.
+        </p>
+        <p>
+            Today it has become extremely difficult to get a job for graduates
+            from not so well known colleges and institutions, it has also become
+            difficult to build valuable connections with potential employers.
+            Well this website has everything you need to succeed in finding a job.
+        </p></h3>
+    <button class="findajob"><a href="/internship">Find a Job or Post a Job</a></button>
+</div>
+
+<div class="internship-intro">
+    <h1 id="intern-head">Discover Job and Internship opportunities</h1>
+
+        <p><h3>
+               <div class="intern-para1"> We offer a wide range of internship positions to cater to various
+                interests and skill sets. Whether you're passionate about marketing, software development, design
+                , finance, or more, we have opportunities for you.
+                Explore our internship positions and find the one that aligns with your career aspirations:</div>
+            <ul>
+                <li>Marketing Intern</li>
+                <li>Software Development Intern</li>
+                <li> and Creative Intern</li>
+                <li>Finance and Accounting Intern  </li>
+            </ul>
+
+        </h3>
+        </p>
+        <h1 id="head">Eligibility Criteria</h1>
+        <p><h3>
+            <div class="intern-para1">To be eligible for our internship program,
+                candidates should meet the following requirements:</div>
+            <ul>
+                <li>Currently enrolled in a college or university program</li>
+                <li>Strong communication and teamwork skills</li>
+                <li>Passion for learning and a desire to excel</li>
+            </ul>
+
+        </p></h3>
+</div>
+<img src="{{ url_for('static', filename='images/google-logo.png') }}" class="google-logo">
+<img src="{{ url_for('static', filename='images/microsoft.png') }}" class="microsoft-logo">
+
+<img src="{{ url_for('static', filename='images/image2.jpg') }}" class="image2">
+
+<div class="community-intro">
+    <h1>A Diverse Community</h1>
+    <p>
+        <h3>Explore our diverse tech community to solve doubts and
+            asks questions on software and technology related subjects.
+        </h3>
+    </p>
+        <p>
+            TechnoProbe boasts a thriving and dynamic tech Community that is
+            at the heart of its digital ecosystem.This tech community is a hub
+            where passionate individuals, experts and enthusiasts from various corners of the
+            tech world come together to share knowledge, collaborate on projects, stay up-to-date
+            with the latest development in the ever-evolving field of technology.
+        </p>
+    </h3>
+        <button class="button-2"><a href="/community">Join</a></button>
+
+</div>
+</body>
+</html>

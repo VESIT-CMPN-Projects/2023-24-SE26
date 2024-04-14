@@ -28,3 +28,9 @@ python main.py
 - Implement machine learning algorithms for personalized career advice.
 - Enhance recommendation system for job postings.
 - Improve user interface for better user experience.
+
+# Team
+1. Sandeep Jagdale
+2. Ammar Ansari
+3. Prashant Barai
+4. Sumeet Janyani
